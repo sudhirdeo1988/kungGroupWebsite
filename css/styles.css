@@ -482,14 +482,16 @@ body {
   background-size: cover;
   display: flex;
   justify-content: center;
-  position: relative;
-  position: relative;
   z-index: 2;
   padding: 86px 80px;
-  height: 429px;
+  min-height: 429px;
   box-sizing: border-box;
   position: relative;
   width: 100%;
+}
+.c-imgBlock.i2 {background-image:url("../images/p2.jpeg") ;}
+.c-imgBlock.i2 .infoBlock{
+  padding: 78px 0;
 }
 .c-imgBlock::before {
   content: "";
@@ -531,6 +533,18 @@ body {
   position: relative;
   top: -10px;
 }
+.infoBlockSubText{
+  display: block;
+  color: #fff;
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 26px;
+  margin: 16px 0;
+  position: relative;
+}
 
 .infoStaticText {
   color: #fff;
@@ -543,6 +557,12 @@ body {
   letter-spacing: 0.03em;
   line-height: 1.61em;
   text-transform: none;
+}
+.infoStaticText.sm{font-size: 12px; line-height: 18px;}
+.infoStaticText.dark {
+  color: #707070;
+  text-align: left;
+  margin: 0 0 16px;
 }
 .c-imgBlock.type-1 {
   display: block;
@@ -680,9 +700,34 @@ body {
   box-sizing: border-box;
   width: 100%;
 }
+.c-videoBlock.type2 .c-dividerBlock {padding: 0;}
+.c-videoBlock.type2 .c-dividerBlock .divider {padding: 17px;}
 .c-videoBlock .c-dividerBlock .divider {
   display: table-cell;
   vertical-align: top;
+}
+.c-videoBlock.type2 .sectHeading{
+  display: block;
+  text-align: center;
+  color: #000;
+  font-family: futura-pt;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 37px;
+  letter-spacing: .11em;
+  line-height: 1.21em;
+  text-transform: uppercase;
+  margin-bottom: 34px;
+}
+.c-videoBlock.type2 .staticText{
+  display: block;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: .03em;
+  line-height: 1.61em;
+  text-transform: none;
+  color: #707070;
 }
 .c-player,
 .c-player img {
@@ -768,6 +813,29 @@ body {
   }
 }
 
+
+.c-userTalk .infoBlockSubText{
+  display: block;
+  font-family: futura-pt;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 17px;
+  letter-spacing: .13em;
+  line-height: 1.8em;
+  text-transform: uppercase;
+}
+.c-userTalk .SubText{
+  display: block;
+  font-family: proxima-nova;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: .03em;
+  line-height: 1.61em;
+  text-transform: none;
+  text-align: center;
+  color: #fff;
+}
 .c-testimon {
   display: block;
   position: relative;
@@ -963,6 +1031,7 @@ body {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  box-sizing: border-box;
   text-decoration: none;
   text-align: center;
   border-radius: 50%;
@@ -983,6 +1052,16 @@ body {
 .socialNav ul li .socialUrl:hover {
   background-color: rgba(222, 222, 222, 0.7);
 }
+
+.socialNav.dark ul li .socialUrl {
+  border: 2px solid #000;
+}
+.socialNav.dark ul li .socialUrl .icon {top: 6px; font-size: 15px;}
+.socialNav.dark ul li .socialUrl:hover {
+  background-color: #000;
+  color: #fff;
+}
+.socialNav.dark ul li .socialUrl:hover .icon{color: #fff;}
 
 /* ------------------------------
     Info Block
@@ -1074,6 +1153,66 @@ body {
   }
 }
 
+/* ------------------------------
+    Tabs Block
+    ---------------------------------*/
+.c-tabs{
+  margin: 0 auto;
+  padding: 0 100px;
+}
+.c-tabs .nav-tabs{
+  border-bottom: 2px solid #d4d4d4;
+}
+.c-tabs .nav-tabs .nav-item{margin-bottom: -2px;}
+.c-tabs .nav-tabs .nav-link{
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+  padding: .5em 2em;
+  margin: 0;
+  text-align: center;
+  color: #888;
+  position: relative;
+  z-index: 3;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: .03em;
+  line-height: 1.61em;
+  text-transform: none;
+  transition: all ease 0.3s;
+}
+.c-tabs .nav-tabs .nav-link.active,
+.c-tabs .nav-tabs .nav-link:hover{
+  color: #000;
+  border-bottom-color: #000;
+}
+
+.c-tabs .tab-pane{
+  padding: 17px;
+}
+
+.c-tabs .imgAsset{
+  margin-bottom: 17px;
+}
+.c-tabs .imgAsset .img-responsive{
+  display: block;
+  width: 100%;
+}
+@media (max-width: 960px) {
+  .c-tabs{
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+}
+@media (max-width: 768px) {
+  .c-tabs{
+    padding: 0;
+  }
+}
+
 .m34-btm {
   margin-bottom: 24px;
 }
+.text-center{text-align: center;}
