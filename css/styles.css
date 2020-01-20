@@ -493,6 +493,8 @@ body {
 .c-imgBlock.i2 .infoBlock{
   padding: 78px 0;
 }
+.c-imgBlock.i3 {background-image:url("../images/pexels-photo-24452.jpg"); padding: 68px 0;}
+.c-imgBlock.i4 {background-image:url("../images/image-asset-3.jpg"); padding: 68px 0;}
 .c-imgBlock::before {
   content: "";
   background-color: rgba(64, 64, 64, 0.56);
@@ -914,18 +916,7 @@ body {
   padding: 68px 80px;
   text-align: left;
 }
-.c-footer .divBlock.info {
-  padding: 0 50px;
-  text-align: left;
-}
-.c-footer .c-dividerBlock .divBlock {
-  text-align: left;
-}
-.c-footer .c-dividerBlock .divBlock.form {
-  width: calc(50% - 200px);
-  padding: 0 50px;
-}
-.c-footer .divBlock .title {
+.c-footer .title {
   font-family: "futura-pt", sans-serif;
   color: #fff;
   display: block;
@@ -937,7 +928,7 @@ body {
   text-transform: uppercase;
   margin-bottom: 17px;
 }
-.c-footer .divBlock .data,
+.c-footer .data,
 .fotmField label {
   color: rgba(222, 222, 222, 0.7);
   display: block;
@@ -982,6 +973,11 @@ body {
   letter-spacing: 0.03em;
 }
 
+@media (max-width: 1024px) {
+  .c-footer .c-dividerBlock .divBlock.form {
+    width: 50%;
+  }
+}
 @media (max-width: 960px) {
   .c-footer {
     padding: 48px 80px;
@@ -993,7 +989,7 @@ body {
   }
   .c-footer .c-dividerBlock .divBlock.form {
     padding: 0;
-    width: calc(50% - 150px);
+    width: calc(50% - 50px);
   }
 }
 @media (max-width: 640px) {
@@ -1085,6 +1081,11 @@ body {
   text-align: center;
   width: 25%;
 }
+.c-imageGrid.sm {width: 100%;}
+.c-imageGrid.sm .imgItem {width: 20%;}
+
+.c-imageRow{margin-bottom: 60px;}
+.c-imageRow .imgItem{text-align: center; margin-bottom: 20px;}
 
 .c-dividerBlock {
   display: table;
@@ -1101,7 +1102,8 @@ body {
   width: 50%;
 }
 
-.c-imageGrid .imgItem img {
+.c-imageGrid .imgItem img,
+.imgItem img {
   display: inline-block;
   max-height: 104px;
   max-width: 214px;
@@ -1145,7 +1147,8 @@ body {
     padding: 0;
     width: 100%;
   }
-  .c-imageGrid .imgItem {
+  .c-imageGrid .imgItem,
+  .c-imageGrid.sm .imgItem {
     display: inline-block;
     width: calc(50% - 10px);
     text-align: center;
@@ -1212,7 +1215,109 @@ body {
   }
 }
 
-.m34-btm {
-  margin-bottom: 24px;
+/* ------------------------------
+    Headings
+    ---------------------------------*/
+.sectHeading{
+  display: block;
+  text-align: center;
+  color: #000;
+  font-family: "futura-pt";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 37px;
+  letter-spacing: .11em;
+  line-height: 1.21em;
+  text-transform: uppercase;
+  margin-bottom: 34px;
 }
-.text-center{text-align: center;}
+.sectHeading.sm{
+  color: #545454;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: .06em;
+  line-height: 1em;
+  margin-bottom: 18px;
+}
+.contactInfo{
+  display: block;
+  text-align: center;
+  margin-bottom: 34px;
+}
+.contactInfo .b-title,
+.contactInfo .b-link{
+  color: #707070;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 700;
+  margin-right: 5px;
+}
+.contactInfo .b-link{
+  border-bottom: 1px solid rgba(0,0,0,.6);
+  color: #000;
+  display: inline-block;
+  font-weight: 300;
+  padding-bottom: .05em;
+  text-decoration: none;
+  margin: 0;
+  transition: all ease 0.3s;
+}
+.contactInfo .b-link:hover{
+  border-bottom: 1px solid rgba(0,0,0,.3);
+  color: rgba(0,0,0,.6);
+}
+
+.c-formGroup{margin-bottom: 24px;}
+.c-formGroup label,
+.c-formGroup small{
+  display: block;
+  font-family: proxima-nova;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: .03em;
+  line-height: normal;
+  text-transform: none;
+  color: #707070;
+  margin-bottom: 0;
+}
+.c-formGroup small{
+  font-size: 12px;
+}
+.c-formGroup .form-control{
+  height: auto;
+  width: 100%;
+  padding: 12px;
+  margin: 6px 0 4px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  color: #000;
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  box-sizing: border-box;
+  outline: none;
+  border-radius: 2px;
+}
+
+.formSection .c-formBtn{
+  color: #fff;
+  border: 0;
+  display: inline-block;
+  font-family: futura-pt;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: #fff;
+  background-color: #272727;
+  padding: 1em 2.5em;
+  outline: none;
+  height: auto;
+  line-height: 14px;
+}
+
+.m34-btm {
+  margin-bottom: 34px;
+}
+.text-center{text-align: center;}.inlineBlock{display: inline-block;}
