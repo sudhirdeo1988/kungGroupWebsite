@@ -479,6 +479,7 @@ body {
     ---------------------------------*/
 .c-imgBlock {
   background: url("../images/p1.jpg") fixed no-repeat;
+  background-position: center;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -489,12 +490,21 @@ body {
   position: relative;
   width: 100%;
 }
+.c-imgBlock.sm{
+  padding: 48px 80px;
+  min-height: 355px;
+}
 .c-imgBlock.i2 {background-image:url("../images/p2.jpeg") ;}
 .c-imgBlock.i2 .infoBlock{
   padding: 78px 0;
 }
-.c-imgBlock.i3 {background-image:url("../images/pexels-photo-24452.jpg"); padding: 68px 0;}
-.c-imgBlock.i4 {background-image:url("../images/image-asset-3.jpg"); padding: 68px 0;}
+.c-imgBlock.i3 {background-image:url("../images/contact.jpg");}
+.c-imgBlock.i4 {background-image:url("../images/image-asset-3.jpg");}
+
+.c-imgBlock.mastery-team {background-image:url("../images/mastery-team.jpg"); background-position: center;}
+.c-imgBlock.mastery-leader {background-image:url("../images/mastery-leader.jpg"); background-position: center;}
+.c-imgBlock.mastery-org {background-image:url("../images/mastery-org.jpg"); background-position: center;}
+
 .c-imgBlock::before {
   content: "";
   background-color: rgba(64, 64, 64, 0.56);
@@ -561,6 +571,14 @@ body {
   text-transform: none;
 }
 .infoStaticText.sm{font-size: 12px; line-height: 18px;}
+.infoStaticText.italic{
+  color: #707070;
+  font-size: 17px;
+  font-weight: lighter;
+  line-height: 26px;
+  text-align: center;
+  font-style: italic;
+}
 .infoStaticText.dark {
   color: #707070;
   text-align: left;
@@ -1316,8 +1334,42 @@ body {
   height: auto;
   line-height: 14px;
 }
+.infoBlock{padding: 17px 0;}
+.infoListing{display: block; position: relative;}
+.infoListing ul{display: block; padding-left: 20px;}
+.infoListing li,
+.infoListing li .link{
+  list-style-type: disc;
+  color: #707070;
+  margin: 0 0 5px;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  line-height: 1.61em;
+  text-transform: none;
+}
+.infoListing li .link{
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,.3);
+  padding-bottom: 1px;
+  outline: none;
+}
 
+.titleStaticText{
+  font-family: "futura-pt";
+  color: #707070;
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  line-height: 17px;
+  text-transform: none;
+  margin-top: 6px;
+}
 .m34-btm {
   margin-bottom: 34px;
 }
 .text-center{text-align: center;}.inlineBlock{display: inline-block;}
+.pad0{padding: 0 !important;}
