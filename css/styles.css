@@ -328,7 +328,6 @@ body {
 .c-header .header_nav {
   display: block;
   height: auto;
-  overflow: hidden;
   padding: 30px 0;
   text-align: right;
 }
@@ -337,11 +336,12 @@ body {
   padding: 22px 0 23px;
   display: block;
 }
-.c-header .header_nav .navLinks li {
+.c-header .header_nav .navLinks > li {
   display: inline-block;
   line-height: 26px;
+  position: relative;
 }
-.c-header .header_nav .navLinks li a {
+.c-header .header_nav .navLinks > li > a {
   display: block;
   color: #ebebeb;
   margin: 0 0.618em;
@@ -349,7 +349,7 @@ body {
   line-height: 12px;
   text-transform: uppercase;
   font-size: 12px;
-  font-weight: lighter;
+  font-weight: 500;
   letter-spacing: 2.5px;
   text-decoration: none;
   transition: all ease 0.3s;
@@ -359,6 +359,40 @@ body {
   color: rgba(235, 235, 235, 0.4);
 }
 .c-header .header_nav .js-closeNav{display: none;}
+
+.hasChildmenu .subMenu{
+  position: absolute;
+  top: 25px;
+  left: -10px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  width: 255px;
+  background-color: #4F4F4F;
+  z-index: 5;
+  padding: 0 1em;
+  transition: all ease 0.3s;
+}
+.hasChildmenu .subMenu .menuLink{
+  display: block;
+  color: #fff;
+  padding: .382em 0;
+  line-height: 12px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-decoration: none;
+  margin: 0;
+  text-align: left;
+  transition: all ease 0.3s;
+}
+.hasChildmenu:hover .subMenu{
+  padding: 1em;
+  max-height: 300px;
+  height: auto;
+  opacity: 1;
+}
 
 @media (max-width: 1024px) {
 }
@@ -531,7 +565,7 @@ body {
   margin-bottom: 72px;
 }
 .infoBlockText {
-  color: #fff;
+  color: #f5f5f5;
   font-family: "futura-pt", sans-serif;
   display: block;
   text-align: center;
@@ -720,12 +754,6 @@ body {
   box-sizing: border-box;
   width: 100%;
 }
-.c-videoBlock.type2 .c-dividerBlock {padding: 0;}
-.c-videoBlock.type2 .c-dividerBlock .divider {padding: 17px;}
-.c-videoBlock .c-dividerBlock .divider {
-  display: table-cell;
-  vertical-align: top;
-}
 .c-videoBlock.type2 .sectHeading{
   display: block;
   text-align: center;
@@ -748,6 +776,11 @@ body {
   line-height: 1.61em;
   text-transform: none;
   color: #707070;
+  margin-bottom: 17px;
+}
+.c-videoBlock.type2 .staticText strong{
+  font-weight: bold;
+  display: inline-block;
 }
 .c-player,
 .c-player img {
@@ -756,22 +789,20 @@ body {
   width: 100%;
   max-height: 290px;
 }
-.c-videoBlock .videoBlockInfo {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-}
 .c-videoBlock .videoBlockInfo .title {
   font-family: "futura-pt", sans-serif;
   color: #545454;
   display: block;
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
   font-size: 22px;
   letter-spacing: 0.06em;
   line-height: 22px;
   text-transform: uppercase;
   margin-bottom: 18px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  text-rendering: optimizeLegibility;
 }
 .c-videoBlock .videoBlockInfo .staticText {
   display: block;
@@ -803,6 +834,12 @@ body {
   padding: 13px 26px;
   line-height: 14px;
   text-decoration: none;
+  transition: all ease 0.3s;
+}
+.button-element:hover {
+  opacity: 0.8;
+  color: #fff;
+  text-decoration: none;
 }
 @media (max-width: 1024px) {
   .c-videoBlock {
@@ -822,13 +859,7 @@ body {
   .c-videoBlock {
     padding: 60px 20px;
   }
-  .c-videoBlock .c-dividerBlock,
-  .c-videoBlock .c-dividerBlock .divider {
-    display: block;
-    width: 100%;
-  }
   .c-videoBlock .videoBlockInfo {
-    margin-top: 50px;
     padding: 0;
   }
 }
@@ -1367,6 +1398,9 @@ body {
   line-height: 17px;
   text-transform: none;
   margin-top: 6px;
+}
+.m17-btm {
+  margin-bottom: 17px !important;
 }
 .m34-btm {
   margin-bottom: 34px;

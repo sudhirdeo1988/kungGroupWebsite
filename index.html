@@ -11,7 +11,10 @@
 
     <link href="./css/bootstrap.min.css" rel="stylesheet" />
     <link href="./css/styles.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="//use.typekit.net/ik/XvcIdItFPlvzuceq2lAWsnZghE5E2XwLwIcGJrd_F5jfezSffFHN4UJLFRbh52jhWD9twD9DFhsqjcmKjAZKFeJkwhjkZcJaZs7wMPG0iey8-am0Zhikdam3O1FUiABkZWF3jAF8OcFzdPUCdhFydeyzSabCiey8-am0Zhikdam3OcFzdPUX-emniAo1Za4ziWM0SaBujW48Sagyjh90jhNlOYiaikoX-emniAo1Za4ziWM0jhNlOYiaikoX-emniAo1Za4ziWM0SaBujW48Sagyjh90jhNlJ6U3ScNt-AuyOAozicIKfAZuiYmkjPu3ifJsZe80OAFzdcs8d1F8ZfuaZAJ7fbRKHyMMeMw6MKG4fHvgIMMjgfMfH6GJCwbgIMMjgPMfH6qJK3IbMg6YJMJ7fbRRHyMMeMX6MKG4fJ3gIMMjIPMfH6qJy89bMs62JMJ7fbKImsMgeMb6MKG4fVN9IMIjgPMfH6qJ6m9bMs6YJMJ7fbKMmsMgeMv6MKG4fJ4mIMIjIPMfH6qJrubbMy6IJMHbMifqhCtB.js"></script>
   </head>
+
   <body class="">
     <!-- ****** Header ******* -->
     <header class="c-header clearfix">
@@ -32,11 +35,18 @@
       <!-- ***** Nav ***** -->
       <div class="header_nav">
         <ul class="navLinks">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li class="hasChildmenu"><a href="#">Solutions</a></li>
-          <li><a href="#">Clients</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li class="hasChildmenu">
+            <a href="#">Solutions</a>
+            <div class="subMenu">
+              <a class="menuLink" href="./leadership.html">Leadership Mastery</a>
+              <a class="menuLink" href="./team.html">Team Mastery</a>
+              <a class="menuLink" href="./organizational.html">Organizational Mastery</a>
+            </div>
+          </li>
+          <li><a href="./clients.html">Clients</a></li>
+          <li><a href="./contact.html">Contact</a></li>
         </ul>
         <button class="js-closeNav" onclick="closeMenu()">
           <i class="icon kg kg-android-close"></i>
@@ -57,36 +67,42 @@
     </div>
     <!-- ****** Image Block ******* -->
 
+
     <!-- ****** Video Block ******* -->
     <div class="c-videoBlock">
-      <div class="c-dividerBlock">
-        <div class="divider">
-          <div class="c-player">
-            <img src="images/videoImage.jpg" alt="" />
-          </div>
-        </div>
-        <div class="divider">
-          <div class="videoBlockInfo">
-            <div class="m34-btm">
-              <span class="title">A VIBRANT ORGANIZATION</span>
-              <p class="staticText">
-                A vibrant organization continually turns adversity into
-                momentum. Within the complexities of change and growth, there is
-                an opportunity for radical transformation.
-              </p>
-              <p class="staticText">
-                We create simple pathways to unleash the latent power of your
-                organization.
-              </p>
+      <div class="row justify-content-center">
+
+            <div class="col-sm-1 col-12"></div>
+
+            <div class="col-sm-5 col-12">
+              <div class="c-player">
+                <img src="images/videoImage.jpg" alt="" />
+              </div>
             </div>
 
-            <div class="btnBlock">
-              <a href="/about" class="button-element" data-initialized="true"
-                >Learn More</a
-              >
+            <div class="col-sm-6 col-12">
+              <div class="videoBlockInfo">
+                <div class="m34-btm">
+                  <h2 class="title">A VIBRANT ORGANIZATION</h2>
+                  <p class="staticText">
+                    A vibrant organization continually turns adversity into
+                    momentum. Within the complexities of change and growth, there is
+                    an opportunity for radical transformation.
+                  </p>
+                  <p class="staticText">
+                    We create simple pathways to unleash the latent power of your
+                    organization.
+                  </p>
+                </div>
+
+                <div class="btnBlock">
+                  <a href="/about" class="button-element" data-initialized="true"
+                    >Learn More</a
+                  >
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+
       </div>
     </div>
     <!-- ****** Video Block End ******* -->
@@ -104,7 +120,69 @@
           </p>
         </div>
 
-        <div class="block-2">
+        <div class="row">
+
+          <div class="col-sm-4 col-12">
+            <div class="c-card">
+              <div class="card-icon">
+                <i class="icon kg kg-male"></i>
+              </div>
+              <div class="card-title">LEADERSHIP MASTERY</div>
+              <div class="card-info">
+                Leadership calls for authenticity, vision and ability to
+                inspire. We support the leader's journey to highest impact.
+              </div>
+              <div class="card-btn">
+                <a href="#" class="btn">
+                  Learn More
+                  <i class="icon kg kg-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4 col-12">
+            <div class="c-card">
+              <div class="card-icon">
+                <i class="icon kg kg-users"></i>
+              </div>
+              <div class="card-title">TEAM MASTERY</div>
+              <div class="card-info">
+                Effective teams are built on a foundation of trust. We provide a
+                process for scaling trust within and across teams.
+              </div>
+              <div class="card-btn">
+                <a href="#" class="btn">
+                  Learn More
+                  <i class="icon kg kg-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4 col-12">
+            <div class="c-card">
+              <div class="card-icon">
+                <i class="icon kg kg-line-chart-1"></i>
+              </div>
+              <div class="card-title">ORGANIZATIONAL MASTERY</div>
+              <div class="card-info">
+                Healthy organizations attain best in class performance through
+                collaboration and high quality relationships. We design roadmaps
+                for radical sustainable growth.
+              </div>
+              <div class="card-btn">
+                <a href="#" class="btn">
+                  Learn More
+                  <i class="icon kg kg-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- <div class="block-2">
           <div class="grid">
             <div class="c-card">
               <div class="card-icon">
@@ -162,7 +240,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
     <!-- ****** Image Block ******* -->
