@@ -5,7 +5,7 @@ function openMenu(){
 }
 function closeMenu(){
   bodyClass.classList.remove('st-openMenu');
-  subMenuClass.classList.remove('m-open');
+  $('.hasChildmenu').removeClass('m-open');
 }
 $(document).ready(function() {
   $('.hasChildmenu .c-link').on('click',function(){
