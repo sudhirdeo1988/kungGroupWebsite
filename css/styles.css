@@ -261,6 +261,13 @@
 .kg-mail:before {
   content: "\46";
 }
+.kg-double-left:before {
+  content: "\47";
+}
+.kg-double-right:before {
+  content: "\48";
+}
+
 /* -------------------------------------------------
 				Body Settings
 	---------------------------------------------------- */
@@ -368,7 +375,7 @@ body {
   overflow: hidden;
   opacity: 0;
   width: 255px;
-  background-color: #4F4F4F;
+  background-color: #3E3D3D;
   z-index: 5;
   padding: 0 1em;
   transition: all ease 0.3s;
@@ -393,6 +400,7 @@ body {
   height: auto;
   opacity: 1;
 }
+.hasChildmenu .subMenu .subMenu_back{display: none;}
 
 @media (max-width: 1024px) {
 }
@@ -472,6 +480,7 @@ body {
   .st-openMenu .c-header .header_nav .navLinks{padding: 0; opacity: 1;}
   .st-openMenu .c-header .header_nav .navLinks li{display: block; text-align: left;}
   .st-openMenu .c-header .header_nav .navLinks li a{
+    color: #e8e8e8;
     display: block;
     font-family: futura-pt;
     font-weight: 700;
@@ -505,6 +514,53 @@ body {
     font-size: 20px;
     display: block;
     font-weight: lighter;
+  }
+
+  .hasChildmenu .subMenu .subMenu_back{
+    font-family: futura-pt;
+    background-color: transparent;
+    border: 0;
+    font-weight: lighter;
+    font-style: normal;
+    font-size: 36px;
+    letter-spacing: 0em;
+    line-height: 1em;
+    text-transform: none;
+    display: block;
+    color: rgba(0,0,0,.5);
+    padding: 0;
+    margin-bottom: 1.618em;
+    outline: none;
+  }
+  .hasChildmenu .subMenu .subMenu_back .icon{
+    color: rgba(255,255,255,.57);
+    display: inline-block;
+    font-size: 20px;
+    vertical-align: middle;
+    line-height: 25px;
+    position: relative;
+    margin-right: 10px;
+  }
+  .hasChildmenu .subMenu{
+    left: -999px;
+    opacity: 1;
+    top: -126px;
+    max-height: 100vh;
+    height: 100vh;
+    z-index: 10;
+    padding: 36px;
+    width: calc(100% + 10px);
+    transition: all ease 0.3s;
+  }
+  .hasChildmenu.m-open .subMenu{
+    left: -34px;
+  }
+  .hasChildmenu .c-link .icon{
+    display: inline-block;
+    font-size: 17px;
+    line-height: 14px;
+    position: relative;
+    top: 1px;
   }
 }
 
