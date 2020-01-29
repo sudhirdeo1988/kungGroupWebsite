@@ -304,6 +304,9 @@ body {
   -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+@media (max-width: 640px) {
+  body{padding-top: 105px;}
+}
 
 /* ------------------------------
       Header Component
@@ -396,7 +399,7 @@ body {
 }
 .hasChildmenu:hover .subMenu{
   padding: 1em;
-  max-height: 300px;
+  max-height: 600px;
   height: auto;
   opacity: 1;
 }
@@ -430,6 +433,11 @@ body {
   .c-header {
     height: 105px;
     padding: 12px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
   }
   .c-header .header_hamb {
     padding: 22px 0 18px;
@@ -477,7 +485,7 @@ body {
     left: -100%;
     transition: all ease 0.25s;
   }
-  .c-header .header_nav .navLinks{opacity: 0; transition: all ease 0.1s;}
+  .c-header .header_nav .navLinks{opacity: 0;}
   .st-openMenu .c-header .header_nav{left: 0;}
   .st-openMenu .c-header .header_nav .navLinks{padding: 0; opacity: 1;}
   .st-openMenu .c-header .header_nav .navLinks li{display: block; text-align: left;}
@@ -1068,6 +1076,7 @@ body {
   color: #000;
   font-family: sans-serif;
   font-size: 12px;
+  font-weight: lighter;
   line-height: normal;
   box-sizing: border-box;
   outline: none;
@@ -1080,7 +1089,7 @@ body {
 }
 
 .footerBottom {
-  padding-top: 37px;
+  padding: 68px 0 0 0;
   text-align: center;
   color: rgba(222, 222, 222, 0.7);
   font-size: 16px;
@@ -1200,9 +1209,6 @@ body {
 .c-imageGrid.sm {width: 100%;}
 .c-imageGrid.sm .imgItem {width: 20%;}
 
-.c-imageRow{margin-bottom: 60px;}
-.c-imageRow .imgItem{text-align: center; margin-bottom: 20px;}
-
 .c-dividerBlock {
   display: table;
   table-layout: fixed;
@@ -1269,6 +1275,32 @@ body {
     width: calc(50% - 10px);
     text-align: center;
     margin-bottom: 20px;
+  }
+}
+
+/* ------------------------------
+    Client Image Grid
+    ---------------------------------*/
+.c-imageRow{
+  display: block;
+  margin-bottom: 60px;
+  position: relative;
+}
+.c-imageRow .imgItem{
+  text-align: center;
+  margin-bottom: 20px;
+  float: left;
+  min-height: 120px;
+  width: 20%;
+}
+@media (max-width: 640px) {
+  .c-imageRow .imgItem{
+    width: 33%;
+  }
+}
+@media (max-width: 520px) {
+  .c-imageRow .imgItem{
+    width: 50%;
   }
 }
 
@@ -1477,10 +1509,11 @@ body {
   margin-bottom: 17px !important;
 }
 .m34-btm {
-  margin-bottom: 34px;
+  margin-bottom: 34px !important;
 }
 .text-center{text-align: center;}.inlineBlock{display: inline-block;}
 .pad0{padding: 0 !important;}
+.pad1em-tb{padding: 1em 0;}
 .watchVideoLabel{
   display: block;
   font-weight: 300;
@@ -1492,3 +1525,5 @@ body {
   color: #707070;
   margin-bottom: 0;
 }
+
+
